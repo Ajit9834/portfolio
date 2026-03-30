@@ -6,8 +6,8 @@ const projects = [
   {
     title: 'Hackathon - Digital Services Platform',
     description:
-      'During the hackathon, we developed a platform designed to simplify access to multiple digital services in one place. The solution focuses on reducing the complexity users face when navigating different portals by providing a centralized and user-friendly interface for managing services efficiently.',
-    tech: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      'We developed a platform designed to simplify access to multiple digital services in one place. The solution focuses on reducing the complexity users face when navigating different portals by providing a centralized and user-friendly interface for managing services efficiently. Built using React.js, Express.js, MongoDB, Node.js, Tailwind CSS, and the modern Next.js stack.',
+    tech: ['React.js', 'Express.js', 'MongoDB', 'Node.js', 'Tailwind CSS', 'Next.js'],
     github: 'https://github.com/Ajit9834/Ajit9834.git',
     featured: true,
   },
@@ -20,18 +20,18 @@ const projects = [
     featured: false,
   },
   {
-    title: 'Weather Dashboard',
+    title: 'E-commerce Price Comparison Platform',
     description:
-      'A real-time weather dashboard that displays current weather conditions, forecasts, and interactive maps using a public weather API.',
-    tech: ['React.js', 'API Integration', 'CSS3'],
+      'A web platform that compares product prices across multiple e-commerce websites in one place, helping users quickly find the best deals with an easy and user-friendly interface.',
+    tech: ['Next.js', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
     github: 'https://github.com/Ajit9834/Ajit9834.git',
     featured: false,
   },
   {
-    title: 'Task Manager Pro',
+    title: 'AI Fashion Recommendation Platform',
     description:
-      'A productivity app for managing tasks with drag-and-drop functionality, priority levels, and deadline tracking.',
-    tech: ['JavaScript', 'HTML5', 'Tailwind CSS'],
+      'A smart fashion recommendation platform that suggests personalized outfit ideas and style combinations based on user preferences, trends, and context using Generative AI.',
+    tech: ['Next.js', 'Tailwind CSS', 'MongoDB', 'Generative AI'],
     github: 'https://github.com/Ajit9834/Ajit9834.git',
     featured: false,
   },
@@ -44,9 +44,7 @@ function ProjectCard({ project, index, isInView }) {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: 0.2 + index * 0.15 }}
       whileHover={{ y: -8 }}
-      className={`group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:border-primary/50 transition-all duration-300 ${
-        project.featured ? 'md:col-span-2' : ''
-      }`}
+      className="group w-full md:w-[calc(50%-0.75rem)] bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:border-primary/50 transition-all duration-300"
     >
       <div className="h-2 bg-gradient-to-r from-primary to-secondary" />
       <div className="p-6 sm:p-8">
@@ -116,7 +114,7 @@ function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.title}

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FaReact, FaJs, FaHtml5, FaCss3Alt } from 'react-icons/fa'
-import { SiTailwindcss } from 'react-icons/si'
+import { SiTailwindcss, SiC, SiCplusplus, SiExpress, SiMongodb } from 'react-icons/si'
 import { HiCode, HiLightBulb, HiCube } from 'react-icons/hi'
 
 const skills = [
@@ -11,6 +11,10 @@ const skills = [
   { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
   { name: 'HTML5', icon: FaHtml5, color: '#E34F26' },
   { name: 'CSS3', icon: FaCss3Alt, color: '#1572B6' },
+  { name: 'C', icon: SiC, color: '#A8B9CC' },
+  { name: 'C++', icon: SiCplusplus, color: '#00599C' },
+  { name: 'Express.js', icon: SiExpress, color: '#111827' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
 ]
 
 const interests = [

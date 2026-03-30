@@ -46,7 +46,7 @@ function Hero() {
                 strings: [
                   'Problem Solver',
                   'Tech Enthusiast',
-                  'Frontend Builder',
+                  'Mern Stack Developer',
                   'System Design Learner',
                 ],
                 autoStart: true,

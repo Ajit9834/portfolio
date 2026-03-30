@@ -31,7 +31,18 @@ const skillCategories = [
   },
   {
     title: 'Tools & Others',
-    skills: ['Git & GitHub', 'VS Code', 'Responsive Design', 'REST APIs', 'Problem Solving'],
+    skills: [
+      'Git & GitHub',
+      'VS Code',
+      'Responsive Design',
+      'REST APIs',
+      'Problem Solving',
+      'Canva',
+      'Docker',
+      'Vercel',
+      'Render',
+      'MongoDB Atlas',
+    ],
   },
 ]
 
@@ -156,7 +167,7 @@ function Resume() {
             >
               <h4 className="font-semibold mb-2">Currently Learning</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Node.js, Express.js, MongoDB, TypeScript, and System Design principles
+                React Native, AWS, and Java
               </p>
             </motion.div>
           </motion.div>

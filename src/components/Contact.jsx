@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FiSend, FiGithub, FiLinkedin, FiMail, FiMapPin } from 'react-icons/fi'
+import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 
 function Contact() {
   const ref = useRef(null)
@@ -109,6 +111,30 @@ function Contact() {
                   className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
                 >
                   <FiLinkedin size={22} />
+                </a>
+                <a
+                  href="https://wa.me/qr/O6R7PIWSTJ6LD1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
+                >
+                  <FaWhatsapp size={22} />
+                </a>
+                <a
+                  href="http://t.me/AJIT9834"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
+                >
+                  <FaTelegramPlane size={22} />
+                </a>
+                <a
+                  href="https://x.com/ZoriAjit13553t"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
+                >
+                  <FaXTwitter size={22} />
                 </a>
               </div>
             </div>
