@@ -8,7 +8,7 @@ const projects = [
     description:
       'We developed a platform designed to simplify access to multiple digital services in one place. The solution focuses on reducing the complexity users face when navigating different portals by providing a centralized and user-friendly interface for managing services efficiently. Built using React.js, Express.js, MongoDB, Node.js, Tailwind CSS, and the modern Next.js stack.',
     tech: ['React.js', 'Express.js', 'MongoDB', 'Node.js', 'Tailwind CSS', 'Next.js'],
-    github: 'https://github.com/Ajit9834/Ajit9834.git',
+    github: 'https://sevadesk.vercel.app/',
     featured: true,
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     description:
       'A web platform that compares product prices across multiple e-commerce websites in one place, helping users quickly find the best deals with an easy and user-friendly interface.',
     tech: ['Next.js', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-    github: 'https://github.com/Ajit9834/Ajit9834.git',
+    github: 'http://price-comparison6.vercel.app/',
     featured: false,
   },
   {
