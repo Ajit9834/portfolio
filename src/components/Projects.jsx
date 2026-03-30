@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FiGithub } from 'react-icons/fi'
+import { SiVercel } from 'react-icons/si'
 
 const projects = [
   {
@@ -65,8 +65,8 @@ function ProjectCard({ project, index, isInView }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-200"
           >
-            <FiGithub size={16} />
-            GitHub
+            <SiVercel size={16} />
+            Vercel
           </a>
         </div>
 
