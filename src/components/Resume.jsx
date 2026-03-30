@@ -7,14 +7,20 @@ const education = [
   {
     degree: 'B.E. in Computer Engineering',
     institution: 'University in Maharashtra',
-    year: '2022 – Present (3rd Year)',
+    year: '2026 – Present (3rd Year)',
     description: 'Currently pursuing Computer Engineering with focus on web technologies and software development.',
   },
   {
     degree: 'HSC (12th)',
     institution: 'Maharashtra State Board',
-    year: '2022',
+    year: '2023',
     description: 'Completed higher secondary education with focus on Science stream.',
+  },
+  {
+    degree: 'SSC (10th)',
+    institution: 'Maharashtra State Board',
+    year: '2021',
+    description: 'Completed secondary education with a strong foundation in core subjects.',
   },
 ]
 
