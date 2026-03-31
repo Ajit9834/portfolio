@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 import { motion, AnimatePresence } from 'framer-motion'
-import { HiMenu, HiX } from 'react-icons/hi'
 import { BsSun, BsMoon } from 'react-icons/bs'
 
 const navLinks = [
@@ -78,9 +77,26 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
               className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
             >
-              {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+              <span className="relative block w-6 h-5">
+                <span
+                  className={`absolute left-0 top-0 h-0.5 w-6 bg-current rounded-full transition-all duration-300 ${
+                    isOpen ? 'translate-y-2 rotate-45' : ''
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-2 h-0.5 w-6 bg-current rounded-full transition-all duration-300 ${
+                    isOpen ? 'opacity-0' : 'opacity-100'
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-4 h-0.5 w-6 bg-current rounded-full transition-all duration-300 ${
+                    isOpen ? '-translate-y-2 -rotate-45' : ''
+                  }`}
+                />
+              </span>
             </button>
           </div>
         </div>
