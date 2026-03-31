@@ -22,13 +22,13 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gray-50/50 dark:bg-gray-900/30" ref={ref}>
+    <section id="contact" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50/50 dark:bg-gray-900/30" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Get In{' '}
@@ -42,7 +42,7 @@ function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -95,12 +95,12 @@ function Contact() {
               <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
                 Find me on
               </p>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 <a
                   href="https://github.com/Ajit9834/Ajit9834.git"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
+                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200 animate-float-slow"
                 >
                   <FiGithub size={22} />
                 </a>
@@ -108,7 +108,7 @@ function Contact() {
                   href="https://www.linkedin.com/in/ajit-zori"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
+                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200 animate-float-slow [animation-delay:0.15s]"
                 >
                   <FiLinkedin size={22} />
                 </a>
@@ -116,7 +116,7 @@ function Contact() {
                   href="https://wa.me/qr/O6R7PIWSTJ6LD1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
+                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200 animate-float-slow [animation-delay:0.3s]"
                 >
                   <FaWhatsapp size={22} />
                 </a>
@@ -124,7 +124,7 @@ function Contact() {
                   href="http://t.me/AJIT9834"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
+                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200 animate-float-slow [animation-delay:0.45s]"
                 >
                   <FaTelegramPlane size={22} />
                 </a>
@@ -132,7 +132,7 @@ function Contact() {
                   href="https://x.com/ZoriAjit13553t"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200"
+                  className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 hover:text-primary transition-all duration-200 animate-float-slow [animation-delay:0.6s]"
                 >
                   <FaXTwitter size={22} />
                 </a>
@@ -148,7 +148,7 @@ function Contact() {
           >
             <form
               onSubmit={handleSubmit}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800"
+              className="bg-white dark:bg-gray-900 rounded-2xl p-5 sm:p-8 shadow-lg border border-gray-100 dark:border-gray-800"
             >
               <div className="space-y-6">
                 <div>

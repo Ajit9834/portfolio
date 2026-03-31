@@ -51,13 +51,13 @@ function Resume() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="resume" className="py-20 px-4" ref={ref}>
+    <section id="resume" className="py-16 sm:py-20 px-4 sm:px-6" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             My{' '}
@@ -74,14 +74,14 @@ function Resume() {
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-shadow duration-300"
+            className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-shadow duration-300"
           >
             <FiDownload size={18} />
             Download Resume
           </motion.a>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -94,16 +94,16 @@ function Resume() {
               <h3 className="text-xl font-semibold">Education</h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {education.map((edu, index) => (
                 <motion.div
                   key={edu.degree}
                   initial={{ opacity: 0, x: -30 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.15 }}
-                  className="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full before:content-[''] after:absolute after:left-[5px] after:top-5 after:w-0.5 after:h-full after:bg-primary/20 after:content-[''] last:after:hidden"
+                  className="relative pl-6 sm:pl-8 before:absolute before:left-0 before:top-2 before:w-2.5 before:h-2.5 sm:before:w-3 sm:before:h-3 before:bg-primary before:rounded-full before:content-[''] after:absolute after:left-[4px] sm:after:left-[5px] after:top-5 after:w-0.5 after:h-full after:bg-primary/20 after:content-[''] last:after:hidden"
                 >
-                  <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md border border-gray-100 dark:border-gray-800">
+                  <div className="bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 shadow-md border border-gray-100 dark:border-gray-800">
                     <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
                       {edu.year}
                     </span>
@@ -132,14 +132,14 @@ function Resume() {
               <h3 className="text-xl font-semibold">Skills</h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {skillCategories.map((category, index) => (
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.15 }}
-                  className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md border border-gray-100 dark:border-gray-800"
+                  className="bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 shadow-md border border-gray-100 dark:border-gray-800"
                 >
                   <h4 className="font-semibold mb-4 flex items-center gap-2">
                     <HiBriefcase className="text-primary" size={18} />
@@ -163,7 +163,7 @@ function Resume() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="mt-6 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-xl p-6 border border-primary/20"
+              className="mt-6 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-xl p-4 sm:p-6 border border-primary/20"
             >
               <h4 className="font-semibold mb-2">Currently Learning</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">

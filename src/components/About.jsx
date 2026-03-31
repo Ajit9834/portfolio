@@ -28,13 +28,13 @@ function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="about" className="py-20 px-4" ref={ref}>
+    <section id="about" className="py-16 sm:py-20 px-4 sm:px-6" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             About{' '}
@@ -45,7 +45,7 @@ function About() {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -55,9 +55,9 @@ function About() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6 }}
-              className="mb-8"
+              className="mb-6 sm:mb-8"
             >
-              <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl animate-float-slow">
                 <img 
                   src="/assets/profile.jpg" 
                   alt="Ajit" 
@@ -66,7 +66,7 @@ function About() {
               </div>
             </motion.div>
 
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-5 sm:p-8 shadow-lg border border-gray-100 dark:border-gray-800">
               <h3 className="text-xl font-semibold mb-4">Who I Am</h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                 I&apos;m Ajit, a passionate Computer Engineering student currently in my 3rd year,
@@ -89,7 +89,7 @@ function About() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                    className="flex items-start gap-4 bg-white dark:bg-gray-900 rounded-xl p-4 shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-colors duration-300"
+                    className="flex items-start gap-3 sm:gap-4 bg-white dark:bg-gray-900 rounded-xl p-4 shadow-md border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-colors duration-300"
                   >
                     <div className="p-2 bg-primary/10 rounded-lg">
                       <interest.icon className="text-primary" size={24} />
@@ -112,7 +112,7 @@ function About() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="text-xl font-semibold mb-6">Skills & Technologies</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill.name}
@@ -120,7 +120,8 @@ function About() {
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg hover:border-primary/50 transition-all duration-300 cursor-default"
+                  className="bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 shadow-md border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg hover:border-primary/50 transition-all duration-300 cursor-default animate-float-slow"
+                  style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <skill.icon
                     size={40}
@@ -136,7 +137,7 @@ function About() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-8 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-2xl p-8 border border-primary/20"
+              className="mt-8 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-2xl p-5 sm:p-8 border border-primary/20"
             >
               <h4 className="font-semibold mb-3 text-lg">Quick Facts</h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-400">

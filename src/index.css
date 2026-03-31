@@ -12,8 +12,56 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 84px;
+}
+
 body {
   font-family: 'Manrope', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes drift-x {
+  0%,
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateX(14px) scale(1.05);
+  }
+}
+
+@keyframes shine-sweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-drift-x {
+  animation: drift-x 8s ease-in-out infinite;
+}
+
+.animate-shine-sweep {
+  animation: shine-sweep 6s ease-in-out infinite;
 }
 
 @layer utilities {
@@ -40,4 +88,16 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #8b5cf6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-float-slow,
+  .animate-drift-x,
+  .animate-shine-sweep {
+    animation: none;
+  }
 }

@@ -44,18 +44,21 @@ function ProjectCard({ project, index, isInView }) {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: 0.2 + index * 0.15 }}
       whileHover={{ y: -8 }}
-      className="group w-full md:w-[calc(50%-0.75rem)] bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+      className="group relative w-full md:w-[calc(50%-0.75rem)] bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:border-primary/50 transition-all duration-300"
     >
+      <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-primary/20 blur-3xl animate-drift-x" />
+      </div>
       <div className="h-2 bg-gradient-to-r from-primary to-secondary" />
       <div className="p-6 sm:p-8">
-        <div className="flex items-start justify-between mb-4">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
           <div>
             {project.featured && (
               <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full mb-3">
                 Featured Project
               </span>
             )}
-            <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-200">
+            <h3 className="text-lg sm:text-xl font-bold group-hover:text-primary transition-colors duration-200">
               {project.title}
             </h3>
           </div>
@@ -63,7 +66,7 @@ function ProjectCard({ project, index, isInView }) {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-3 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-200"
           >
             <SiVercel size={16} />
             Vercel
@@ -94,13 +97,13 @@ function Projects() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gray-50/50 dark:bg-gray-900/30" ref={ref}>
+    <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50/50 dark:bg-gray-900/30" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             My{' '}
@@ -114,7 +117,7 @@ function Projects() {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.title}
