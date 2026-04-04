@@ -52,6 +52,17 @@ body {
   }
 }
 
+@keyframes blink-caret {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .animate-float-slow {
   animation: float-slow 6s ease-in-out infinite;
 }
@@ -62,6 +73,14 @@ body {
 
 .animate-shine-sweep {
   animation: shine-sweep 6s ease-in-out infinite;
+}
+
+.typing-cursor {
+  width: 3px;
+  height: 2.35rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #b1d0ff, #ff7ddf);
+  animation: blink-caret 1s step-end infinite;
 }
 
 @layer utilities {
@@ -97,7 +116,8 @@ body {
 
   .animate-float-slow,
   .animate-drift-x,
-  .animate-shine-sweep {
+  .animate-shine-sweep,
+  .typing-cursor {
     animation: none;
   }
 }
