@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Lenis from 'lenis'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -18,6 +19,24 @@ function App() {
       document.documentElement.classList.remove('dark')
     }
   }, [darkMode])
+
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    let rafId = 0
+
+    const raf = (time) => {
+      lenis.raf(time)
+      rafId = requestAnimationFrame(raf)
+    }
+
+    rafId = requestAnimationFrame(raf)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      lenis.destroy()
+    }
+  }, [])
 
   const toggleDarkMode = () => setDarkMode(!darkMode)
 

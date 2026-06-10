@@ -121,3 +121,52 @@ body {
     animation: none;
   }
 }
+
+@media (max-height: 720px) {
+  #home {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    align-items: flex-start;
+  }
+
+  #home .hero-shell {
+    transform: scale(0.82);
+    transform-origin: top center;
+    width: 121.95%;
+    margin-top: -0.5rem;
+  }
+
+  #home .hero-avatar {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #home .hero-card {
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+  }
+
+  #home .hero-title {
+    font-size: 1.7rem;
+    line-height: 1;
+  }
+
+  #home .hero-type {
+    font-size: 1.25rem;
+  }
+
+  #home .hero-text {
+    margin-bottom: 0.6rem;
+    font-size: 0.88rem;
+  }
+
+  #home .hero-socials {
+    margin-bottom: 0.7rem;
+  }
+
+  #home .hero-button {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+}
